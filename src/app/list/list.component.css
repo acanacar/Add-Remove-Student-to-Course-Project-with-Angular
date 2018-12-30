@@ -1,0 +1,39 @@
+#one-column-emphasis {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  width: 480px;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+#one-column-emphasis th {
+  font-size: 14px;
+  font-weight: normal;
+  color: #039;
+  padding: 12px 15px;
+}
+
+#one-column-emphasis td {
+  color: #669;
+  border-top: 1px solid #e8edff;
+  padding: 10px 15px;
+}
+
+.table .tr, .table tr, table .tr, table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  padding-top: 5px;
+  line-height: unset;
+  vertical-align: unset;
+}
+
+.editing {
+  background-color: #f0f0f0;
+}
+
+.notediting {
+  background-color: unset;
+}

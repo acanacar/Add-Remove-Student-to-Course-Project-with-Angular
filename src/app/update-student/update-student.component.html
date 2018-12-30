@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-xs-3">
+    <form [formGroup]="this.studentService.form" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="form-group">
+        <label>Student Name</label>
+        <input
+          formControlName="name" class="form-control"
+          [ngClass]="{'is-invalid':submitted&&formControls.name.errors}"
+        >
+        <div class="invalid-feedback" *ngIf="submitted&&formControls.name.errors">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Student Surname</label>
+        <input
+          formControlName="surname" class="form-control"
+          [ngClass]="{'is-invalid':submitted&&formControls.surname.errors}"
+        >
+        <div class="invalid-feedback" *ngIf="submitted&&formControls.surname.errors">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Curator</label>
+        <input
+          formControlName="curator" class="form-control"
+          [ngClass]="{'is-invalid':submitted&&formControls.curator.errors}"
+        >
+        <div class="invalid-feedback" *ngIf="submitted&&formControls.curator.errors">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <input
+          formControlName="course" class="form-control"
+          [ngClass]="{'is-invalid':submitted&&formControls.course.errors}"
+        >
+        <div class="invalid-feedback" *ngIf="submitted&&formControls.course.errors">
+          This field is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </div>
+    </form>
+    <div class="alert alert-info" *ngIf="showSuccessMessage">
+      Edited Succesfully!
+    </div>
+  </div>
+  <div class="col-xs-8 col-xs-offset-1">
+    <app-list></app-list>
+  </div>
+</div>
